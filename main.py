@@ -1,8 +1,8 @@
 from engine.game_loop import start_game
+from assets.ascii_art import get_title_art
 
 def main():
-    print("=== WELCOME TO CODE HEIST ===")
-    print("You are a white-hat hacker trying to test digital defenses...")
+    print(get_title_art())
     input("Press Enter to begin your mission.")
     start_game()
 

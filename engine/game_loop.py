@@ -1,4 +1,5 @@
 from levels import level1, level2, level3, level4
+from assets.ascii_art import get_access_granted, get_access_denied
 
 def start_game():
     print("\n🔐 SYSTEM 1: Encrypted Password Detected...")
@@ -16,7 +17,5 @@ def start_game():
         print("\n✅ ACCESS GRANTED! Moving to SYSTEM 4...")
         success = level4.run_level()
 
-    if success:
-        print("\n🎉 CONGRATULATIONS! You've successfully breached all systems.")
-    else:
-        print("\n❌ SYSTEM SECURED! You failed the mission. Better luck next time.")
+    print("\n" + ("🎉 MISSION COMPLETE!" if success else "💀 MISSION FAILED..."))
+    print(get_access_granted() if success else get_access_denied())
